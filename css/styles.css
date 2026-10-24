@@ -397,6 +397,39 @@ table.timetable tbody tr:hover { background: rgba(227,27,44,0.06); }
 table.timetable .class-name { font-weight: 600; color: var(--color-text); }
 table.timetable .class-meta { display: block; color: var(--color-text-muted); font-size: 0.8rem; }
 
+@media (max-width: 640px) {
+  table.timetable { min-width: 0; }
+  table.timetable caption { display: block; width: 100%; }
+  table.timetable thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  table.timetable, table.timetable tbody, table.timetable tr, table.timetable td { display: block; width: 100%; }
+  table.timetable tr {
+    border-bottom: 1px solid var(--color-border);
+    padding: 14px 18px;
+  }
+  table.timetable tbody tr:last-child { border-bottom: none; }
+  table.timetable td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 4px 0;
+    border-bottom: none;
+    text-align: right;
+  }
+  table.timetable td::before {
+    content: attr(data-label);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.72rem;
+    color: var(--color-accent);
+    text-align: left;
+    flex-shrink: 0;
+  }
+  table.timetable .class-name { text-align: right; }
+  table.timetable .class-meta { text-align: right; }
+}
+
 /* ---------- Pricing ---------- */
 
 .pricing-card {
