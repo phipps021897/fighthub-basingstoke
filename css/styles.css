@@ -369,65 +369,93 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   color: var(--color-text-muted);
 }
 
-/* ---------- Timetable ---------- */
+/* ---------- Timetable (day tabs) ---------- */
 
-.timetable-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius); }
-
-table.timetable {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 760px;
+.day-tabs__nav {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 28px;
+}
+.day-tab {
+  flex: 1 0 auto;
+  min-width: 72px;
+  padding: 12px 16px;
   background: var(--color-surface);
-}
-table.timetable caption { caption-side: top; text-align: left; padding: 16px 20px; color: var(--color-text-muted); font-size: 0.85rem;}
-table.timetable th, table.timetable td {
-  padding: 16px 18px;
-  text-align: left;
-  border-bottom: 1px solid var(--color-border);
-  font-size: 0.92rem;
-}
-table.timetable thead th {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text-muted);
   font-family: var(--font-heading);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--color-accent);
-  background: var(--color-bg-alt);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
 }
-table.timetable tbody tr:hover { background: rgba(227,27,44,0.06); }
-table.timetable .class-name { font-weight: 600; color: var(--color-text); }
-table.timetable .class-meta { display: block; color: var(--color-text-muted); font-size: 0.8rem; }
+.day-tab:hover { border-color: var(--color-primary); color: var(--color-text); }
+.day-tab.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
 
-@media (max-width: 640px) {
-  table.timetable { min-width: 0; }
-  table.timetable caption { display: block; width: 100%; }
-  table.timetable thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  table.timetable, table.timetable tbody, table.timetable tr, table.timetable td { display: block; width: 100%; }
-  table.timetable tr {
-    border-bottom: 1px solid var(--color-border);
-    padding: 14px 18px;
-  }
-  table.timetable tbody tr:last-child { border-bottom: none; }
-  table.timetable td {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    padding: 4px 0;
-    border-bottom: none;
-    text-align: right;
-  }
-  table.timetable td::before {
-    content: attr(data-label);
-    font-family: var(--font-heading);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    font-size: 0.72rem;
-    color: var(--color-accent);
-    text-align: left;
-    flex-shrink: 0;
-  }
-  table.timetable .class-name { text-align: right; }
-  table.timetable .class-meta { text-align: right; }
+.day-panel { display: block; margin-bottom: 24px; }
+.js .day-panel { display: none; margin-bottom: 0; }
+.js .day-panel.is-active { display: block; }
+.day-panel .day-panel-heading {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.day-panel-empty {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.class-card-list { display: flex; flex-direction: column; gap: 12px; }
+.class-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  transition: border-color var(--transition);
+}
+.class-card:hover { border-color: var(--color-primary); }
+.class-card .class-time {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  width: 128px;
+}
+.class-card .class-info { flex: 1; min-width: 0; }
+.class-card .class-info h3 {
+  font-size: 1.05rem;
+  margin: 0 0 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.class-card .class-who { color: var(--color-text-muted); font-size: 0.85rem; }
+
+.class-card-list--wide-time .class-time { width: 168px; }
+
+@media (max-width: 560px) {
+  .class-card { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .class-card .class-time { width: auto; }
 }
 
 /* ---------- Pricing ---------- */

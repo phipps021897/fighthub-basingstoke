@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
@@ -42,5 +44,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') close();
     });
+  }
+
+  const dayTabs = document.querySelectorAll('.day-tab');
+  const dayPanels = document.querySelectorAll('.day-panel');
+  if (dayTabs.length && dayPanels.length) {
+    const activate = (day) => {
+      dayTabs.forEach((tab) => {
+        const isActive = tab.dataset.day === day;
+        tab.classList.toggle('is-active', isActive);
+        tab.setAttribute('aria-selected', String(isActive));
+      });
+      dayPanels.forEach((panel) => {
+        panel.classList.toggle('is-active', panel.dataset.day === day);
+      });
+    };
+
+    dayTabs.forEach((tab) => {
+      tab.addEventListener('click', () => activate(tab.dataset.day));
+    });
+
+    const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    const today = dayNames[new Date().getDay()];
+    const hasToday = Array.from(dayTabs).some((tab) => tab.dataset.day === today);
+    activate(hasToday ? today : 'monday');
   }
 });

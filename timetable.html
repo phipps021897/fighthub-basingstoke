@@ -45,38 +45,78 @@
 
   <section class="section">
     <div class="container">
-      <div class="timetable-wrap">
-        <table class="timetable">
-          <caption>All times are subject to change — confirm with reception before your first visit. "Fight Team" sessions are invitation only.</caption>
-          <thead>
-            <tr><th>Day</th><th>Time</th><th>Class</th><th>Who's It For</th></tr>
-          </thead>
-          <tbody>
-            <tr><td data-label="Day">Monday</td><td data-label="Time">17:15 – 18:15</td><td data-label="Class" class="class-name">Youth Team</td><td data-label="Who's It For">Ages 11–15</td></tr>
-            <tr><td data-label="Day">Monday</td><td data-label="Time">18:15 – 19:30</td><td data-label="Class" class="class-name">K1</td><td data-label="Who's It For">Adults, all levels</td></tr>
+      <p style="color:var(--color-text-muted); font-size:0.9rem; margin-bottom:24px;">All times are subject to change — confirm with reception before your first visit. "Fight Team" sessions are invitation only.</p>
 
-            <tr><td data-label="Day">Tuesday</td><td data-label="Time">06:30 – 07:30</td><td data-label="Class" class="class-name">BoxFit</td><td data-label="Who's It For">Adults, fitness-focused</td></tr>
-            <tr><td data-label="Day">Tuesday</td><td data-label="Time">17:20 – 18:15</td><td data-label="Class" class="class-name">Kids Boxing</td><td data-label="Who's It For">Ages 4–10</td></tr>
-            <tr><td data-label="Day">Tuesday</td><td data-label="Time">18:15 – 19:30</td><td data-label="Class" class="class-name">Fight Team <span class="class-meta">Invitation only</span></td><td data-label="Who's It For">Advanced / competitive</td></tr>
-            <tr><td data-label="Day">Tuesday</td><td data-label="Time">19:30 – 20:15</td><td data-label="Class" class="class-name">Boxing</td><td data-label="Who's It For">All levels</td></tr>
+      <div class="day-tabs">
+        <div class="day-tabs__nav" role="tablist" aria-label="Choose a day">
+          <button class="day-tab" type="button" data-day="monday" role="tab" aria-selected="false">Mon</button>
+          <button class="day-tab" type="button" data-day="tuesday" role="tab" aria-selected="false">Tue</button>
+          <button class="day-tab" type="button" data-day="wednesday" role="tab" aria-selected="false">Wed</button>
+          <button class="day-tab" type="button" data-day="thursday" role="tab" aria-selected="false">Thu</button>
+          <button class="day-tab" type="button" data-day="friday" role="tab" aria-selected="false">Fri</button>
+          <button class="day-tab" type="button" data-day="saturday" role="tab" aria-selected="false">Sat</button>
+          <button class="day-tab" type="button" data-day="sunday" role="tab" aria-selected="false">Sun</button>
+        </div>
 
-            <tr><td data-label="Day">Wednesday</td><td data-label="Time">17:15 – 18:15</td><td data-label="Class" class="class-name">Junior Kickboxing <span class="class-meta">New</span></td><td data-label="Who's It For">Ages 9–14</td></tr>
-            <tr><td data-label="Day">Wednesday</td><td data-label="Time">18:15 – 19:30</td><td data-label="Class" class="class-name">Boxing</td><td data-label="Who's It For">All levels</td></tr>
-            <tr><td data-label="Day">Wednesday</td><td data-label="Time">19:30 – 20:45</td><td data-label="Class" class="class-name">K1</td><td data-label="Who's It For">Adults, all levels</td></tr>
+        <div class="day-panel" data-day="monday" role="tabpanel">
+          <h2 class="day-panel-heading">Monday</h2>
+          <div class="class-card-list">
+            <div class="class-card"><div class="class-time">17:15 – 18:15</div><div class="class-info"><h3>Youth Team</h3><span class="class-who">Ages 11–15</span></div></div>
+            <div class="class-card"><div class="class-time">18:15 – 19:30</div><div class="class-info"><h3>K1</h3><span class="class-who">Adults, all levels</span></div></div>
+          </div>
+        </div>
 
-            <tr><td data-label="Day">Thursday</td><td data-label="Time">06:30 – 07:30</td><td data-label="Class" class="class-name">BoxFit</td><td data-label="Who's It For">Adults, fitness-focused</td></tr>
-            <tr><td data-label="Day">Thursday</td><td data-label="Time">18:15 – 19:15</td><td data-label="Class" class="class-name">Youth Team</td><td data-label="Who's It For">Ages 11–15</td></tr>
-            <tr><td data-label="Day">Thursday</td><td data-label="Time">19:15 – 20:15</td><td data-label="Class" class="class-name">Fight Team <span class="class-meta">Invitation only</span></td><td data-label="Who's It For">Advanced / competitive</td></tr>
+        <div class="day-panel" data-day="tuesday" role="tabpanel">
+          <h2 class="day-panel-heading">Tuesday</h2>
+          <div class="class-card-list">
+            <div class="class-card"><div class="class-time">06:30 – 07:30</div><div class="class-info"><h3>BoxFit</h3><span class="class-who">Adults, fitness-focused</span></div></div>
+            <div class="class-card"><div class="class-time">17:20 – 18:15</div><div class="class-info"><h3>Kids Boxing</h3><span class="class-who">Ages 4–10</span></div></div>
+            <div class="class-card"><div class="class-time">18:15 – 19:30</div><div class="class-info"><h3>Fight Team <span class="tag">Invitation Only</span></h3><span class="class-who">Advanced / competitive</span></div></div>
+            <div class="class-card"><div class="class-time">19:30 – 20:15</div><div class="class-info"><h3>Boxing</h3><span class="class-who">All levels</span></div></div>
+          </div>
+        </div>
 
-            <tr><td data-label="Day">Friday</td><td data-label="Time">17:15 – 18:00</td><td data-label="Class" class="class-name">Kids Boxing</td><td data-label="Who's It For">Ages 4–10</td></tr>
-            <tr><td data-label="Day">Friday</td><td data-label="Time">18:00 – 19:00</td><td data-label="Class" class="class-name">Junior Kickboxing <span class="class-meta">New</span></td><td data-label="Who's It For">Ages 9–14</td></tr>
-            <tr><td data-label="Day">Friday</td><td data-label="Time">19:00 – 20:15</td><td data-label="Class" class="class-name">Boxing</td><td data-label="Who's It For">All levels</td></tr>
+        <div class="day-panel" data-day="wednesday" role="tabpanel">
+          <h2 class="day-panel-heading">Wednesday</h2>
+          <div class="class-card-list">
+            <div class="class-card"><div class="class-time">17:15 – 18:15</div><div class="class-info"><h3>Junior Kickboxing <span class="tag">New</span></h3><span class="class-who">Ages 9–14</span></div></div>
+            <div class="class-card"><div class="class-time">18:15 – 19:30</div><div class="class-info"><h3>Boxing</h3><span class="class-who">All levels</span></div></div>
+            <div class="class-card"><div class="class-time">19:30 – 20:45</div><div class="class-info"><h3>K1</h3><span class="class-who">Adults, all levels</span></div></div>
+          </div>
+        </div>
 
-            <tr><td data-label="Day">Sunday</td><td data-label="Time">10:00 – 11:30</td><td data-label="Class" class="class-name">Open Sparring</td><td data-label="Who's It For">Advanced / competitive</td></tr>
-          </tbody>
-        </table>
+        <div class="day-panel" data-day="thursday" role="tabpanel">
+          <h2 class="day-panel-heading">Thursday</h2>
+          <div class="class-card-list">
+            <div class="class-card"><div class="class-time">06:30 – 07:30</div><div class="class-info"><h3>BoxFit</h3><span class="class-who">Adults, fitness-focused</span></div></div>
+            <div class="class-card"><div class="class-time">18:15 – 19:15</div><div class="class-info"><h3>Youth Team</h3><span class="class-who">Ages 11–15</span></div></div>
+            <div class="class-card"><div class="class-time">19:15 – 20:15</div><div class="class-info"><h3>Fight Team <span class="tag">Invitation Only</span></h3><span class="class-who">Advanced / competitive</span></div></div>
+          </div>
+        </div>
+
+        <div class="day-panel" data-day="friday" role="tabpanel">
+          <h2 class="day-panel-heading">Friday</h2>
+          <div class="class-card-list">
+            <div class="class-card"><div class="class-time">17:15 – 18:00</div><div class="class-info"><h3>Kids Boxing</h3><span class="class-who">Ages 4–10</span></div></div>
+            <div class="class-card"><div class="class-time">18:00 – 19:00</div><div class="class-info"><h3>Junior Kickboxing <span class="tag">New</span></h3><span class="class-who">Ages 9–14</span></div></div>
+            <div class="class-card"><div class="class-time">19:00 – 20:15</div><div class="class-info"><h3>Boxing</h3><span class="class-who">All levels</span></div></div>
+          </div>
+        </div>
+
+        <div class="day-panel" data-day="saturday" role="tabpanel">
+          <h2 class="day-panel-heading">Saturday</h2>
+          <p class="day-panel-empty">No classes scheduled on Saturdays. Check back Sunday morning for Open Sparring, or see the full week using the tabs above.</p>
+        </div>
+
+        <div class="day-panel" data-day="sunday" role="tabpanel">
+          <h2 class="day-panel-heading">Sunday</h2>
+          <div class="class-card-list">
+            <div class="class-card"><div class="class-time">10:00 – 11:30</div><div class="class-info"><h3>Open Sparring</h3><span class="class-who">Advanced / competitive</span></div></div>
+          </div>
+        </div>
       </div>
-      <p style="margin-top:24px; color:var(--color-text-muted); font-size:0.9rem;">Looking for a specific class? Read more about our <a href="boxing-basingstoke.html" style="color:var(--color-accent);">boxing programme</a> or <a href="muay-thai-basingstoke.html" style="color:var(--color-accent);">Muay Thai &amp; kickboxing programme</a>.</p>
+
+      <p style="margin-top:32px; color:var(--color-text-muted); font-size:0.9rem;">Looking for a specific class? Read more about our <a href="boxing-basingstoke.html" style="color:var(--color-accent);">boxing programme</a> or <a href="muay-thai-basingstoke.html" style="color:var(--color-accent);">Muay Thai &amp; kickboxing programme</a>.</p>
     </div>
   </section>
 
@@ -150,6 +190,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=2"></script>
 </body>
 </html>
