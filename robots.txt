@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.fighthubbasingstoke.co.uk/sitemap.xml
+Sitemap: https://fighthubbasingstoke.co.uk/sitemap.xml
