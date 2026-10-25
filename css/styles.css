@@ -428,7 +428,7 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 18px 22px;
+  padding: 22px 32px;
   transition: border-color var(--transition);
 }
 .class-card:hover { border-color: var(--color-primary); }
