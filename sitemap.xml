@@ -52,4 +52,8 @@
     <loc>https://fighthubbasingstoke.co.uk/contact.html</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://fighthubbasingstoke.co.uk/sponsored-by.html</loc>
+    <priority>0.3</priority>
+  </url>
 </urlset>
