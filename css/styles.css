@@ -131,6 +131,28 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
 
 .btn-block { width: 100%; }
 
+/* ---------- Promo Banner ---------- */
+
+.promo-banner {
+  background: var(--color-accent);
+  color: #0b0b0d;
+  text-align: center;
+  padding: 10px 16px;
+}
+.promo-banner p {
+  margin: 0;
+  color: #0b0b0d;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+}
+.promo-banner a {
+  color: #0b0b0d;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
 /* ---------- Header / Nav ---------- */
 
 .site-header {
@@ -443,7 +465,7 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
 .class-card .class-info { flex: 1; min-width: 0; }
 .class-card .class-info h3 {
   font-size: 1.05rem;
-  margin: 0 0 2px;
+  margin: 0 10px 2px 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
